@@ -1,0 +1,16 @@
+{
+  "name": "strangepassions",
+  "description": "Submission app for Strange Passion talks at Strange Loop 2010",
+  "version": "0.0.1",
+  "contributors": [ 
+    { "name": "James Carr", "email": "james.r.carr@gmail.com" }
+  ],
+  "directories": { "lib": "./lib/" },
+  "engines": { "node": ">= 0.1.98" },
+  "dependencies":{
+    "express":"1.0.0beta",
+    "connect":"0.2.3",
+    "jade":"0.3.0",
+    "cradle":"0.2.0"   
+  }
+}

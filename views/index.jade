@@ -1,0 +1,18 @@
+- if(info)
+  p= info  
+h1= title
+a(href:'/submitTalk') Submit A Talk
+
+h2 Talks
+
+- if(talks)
+  ul#talks
+    - each talk in talks
+      li 
+        table(width:'100%')
+          tr
+            td.left
+              a.title(href:'/talk/'+talk.slug)= talk.title
+            td.right
+              a.vote(href:'/vote/'+talk.slug) Vote
+              p.totalvotes= talk.votes + ' Votes'

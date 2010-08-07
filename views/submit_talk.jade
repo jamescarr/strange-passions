@@ -1,0 +1,23 @@
+h1= title
+
+
+form(method:'post', action:'/submitTalk')
+  table
+    tr
+      td
+        label Title
+      td
+        input(type:'text', name:'title')
+    tr
+      td
+        label Abstract
+      td
+        textarea(name:'abstract')
+    tr
+      td
+        label Tags
+      td
+        input(type:'text', name:'tags')
+    tr
+      td(colspan:2)
+        input(type:'submit')
