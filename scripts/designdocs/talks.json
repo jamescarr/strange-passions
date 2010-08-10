@@ -1,0 +1,9 @@
+{
+   "all": {
+       "map": "function (doc){ if(doc.type=='talk')emit(doc.slug, doc);    }"
+   },
+   "votes": {
+       "map": "function(doc){ if(doc.type=='votes')emit(doc.talk, 1); }",
+       "reduce": "_sum"
+   }
+}

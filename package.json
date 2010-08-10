@@ -8,9 +8,10 @@
   "directories": { "lib": "./lib/" },
   "engines": { "node": ">= 0.1.98" },
   "dependencies":{
-    "express":"1.0.0beta",
+    "express":"1.0.0rc",
     "connect":"0.2.3",
     "jade":"0.3.0",
     "cradle":"0.2.0"   
-  }
+  },
+  "scripts":{"install":"node scripts/createviews.js"}
 }
