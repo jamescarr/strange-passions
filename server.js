@@ -1,15 +1,10 @@
-vrequire = function(lib) { 
-  require.paths.unshift(__dirname + "/vendor/.npm/" + lib + "/active/package/lib");
-  return require(lib); 
-}
-
-require.paths.unshift(__dirname + '/lib/')
-require.paths.unshift(__dirname + '/vendor/')
 var port = process.env.PORT || 3000
 
-var express = vrequire('express'),
+require.paths.unshift(__dirname + '/lib/')
+require('./vendor')
+var express = require('express'),
     routes = require('routes'),
-    connect = vrequire('connect')
+    connect = require('connect')
     
 var app = express.createServer(
   connect.bodyDecoder(),
