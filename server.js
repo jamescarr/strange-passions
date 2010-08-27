@@ -1,4 +1,10 @@
+var http = require('http')
 
+http.createServer(function(req, res){
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}, process.env.PORT)
+/*
 require.paths.unshift(__dirname + '/lib/')
 require.paths.unshift(__dirname + '/vendor/')
 require(__dirname + '/vendor')
@@ -36,4 +42,4 @@ routes.connect(app);
 app.listen(parseInt(process.env.PORT) || 3000, null);
 
 
-
+*/
