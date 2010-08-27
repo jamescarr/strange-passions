@@ -1,5 +1,3 @@
-var port = process.env.PORT || 3000
-
 require.paths.unshift(__dirname + '/lib/')
 require.paths.unshift(__dirname + '/vendor/')
 var vendor = require('./vendor')
@@ -32,10 +30,7 @@ app.configure('production', function(){
 });
 
 routes.connect(app);
-// Routes
 
 
-app.listen(port, function(){
-  console.log('listening for connections on port ' + port)
-});
+
 
