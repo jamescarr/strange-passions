@@ -9,10 +9,5 @@ h2 Talks
   ul#talks
     - each talk in talks
       li 
-        table(width:'100%')
-          tr
-            td.left
-              a.title(href:'/talk/'+talk.slug)= talk.title
-            td.right
-              a.vote(href:'/vote/'+talk.slug) Vote
-              p.totalvotes= talk.votes + ' Votes'
+      a.title(href:'/talk/'+talk.slug)= talk.title
+      
