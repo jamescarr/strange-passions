@@ -1,10 +1,9 @@
 require.paths.unshift(__dirname + '/lib/')
-require.paths.unshift(__dirname + '/vendor/')
 require('./vendor')
 var vendor = require('./vendor')
-var express = vendor.express,
+var express = require('express'),
     routes = require('routes'),
-    connect = vendor.connect
+    connect = require('connect')
     
 var app = express.createServer(
   connect.bodyDecoder(),
