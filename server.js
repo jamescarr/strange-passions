@@ -2,10 +2,10 @@ var port = process.env.PORT || 3000
 
 require.paths.unshift(__dirname + '/lib/')
 require.paths.unshift(__dirname + '/vendor/')
-require('./vendor')
-var express = require('express'),
+var vendor = require('./vendor')
+var express = vendor.express,
     routes = require('routes'),
-    connect = require('connect')
+    connect = vendor.connect
     
 var app = express.createServer(
   connect.bodyDecoder(),
