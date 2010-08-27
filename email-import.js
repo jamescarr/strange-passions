@@ -2,12 +2,16 @@ var request = require('request')
 var Connection = require('cradle').Connection
 var crypto = require('crypto')
 
-var db = new Connection().database('strangepassions')
+var db = new Connection('http://strangepassions.couchone.com', 5984).database('strangepassions')
 
 request({uri:'https://www.regonline.com/activereports/smartLink.aspx?eventid=0yJ+8WrS3pQ=&crid=501887'}, function(er, hdrs, body){
   body.replace(/"/g, "").split("\r\n").forEach(function(email){
     if(email.indexOf('@') > 0){
-      db.insert(sha1(email), {}, function(){ console.log("Added " + email)})  
+      var hashedEmail = sha1(email)
+      db.get(hashedEmail, function(err, result){
+        if(err)
+          db.insert(hashedEmail, {email:email}, function(){ console.log("Added " + email)})  
+      })
     }
   })
 })

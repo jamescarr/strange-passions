@@ -1,4 +1,5 @@
 require.paths.unshift(__dirname + '/lib/')
+var port = process.env.PORT || 3000
 
 var express = require('express'),
     routes = require('routes'),
@@ -32,7 +33,7 @@ routes.connect(app);
 // Routes
 
 
-app.listen(3000, function(){
-  console.log('listening for connections on port 3000')
+app.listen(port, function(){
+  console.log('listening for connections on port ' + port)
 });
 
