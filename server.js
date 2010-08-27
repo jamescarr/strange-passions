@@ -1,21 +1,5 @@
-var http = require('http'),
-    spawn = require('child_process').spawn
-
-http.createServer(function(req, res){
-  var ls =spawn('ls -al ' + __dirname) 
-  ls.stdout.on('data', function(data){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('ls -al ' + __dirname + "\n"+data);
-  })
-  ls.stderr.on('data', function(data){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('ls -al ' + __dirname + "\n"+data);
-  })
-}).listen(parseInt(process.env.PORT))
-/*
 require.paths.unshift(__dirname + '/lib/')
 require.paths.unshift(__dirname + '/vendor/')
-require(__dirname + '/vendor')
 var express = require('express'),
     routes = require('routes'),
     connect = require('connect')
@@ -48,6 +32,3 @@ routes.connect(app);
 
 
 app.listen(parseInt(process.env.PORT) || 3000, null);
-
-
-*/
