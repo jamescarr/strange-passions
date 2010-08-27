@@ -1,13 +1,6 @@
-form.voting-wrapper(action:'/rating', method:'post')
-  input(type:'hidden', name:'talk', value:talk.slug)
-  select(name:'rating', id:talk.slug)
-    option 1
-    option 2
-    option 3
-    option 4
-    option 5
-  input(type:'submit', value:'submit rating')
+
 
 h2= talk.title
-p= talk.abstract
+- each para in talkBody
+  p= para
 

@@ -14,5 +14,5 @@
     "cradle":"0.2.0",
     "request":"0.10.0"   
   },
-  "scripts":{"install":"node scripts/createviews.js"}
+  
 }

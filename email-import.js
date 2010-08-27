@@ -2,7 +2,7 @@ var request = require('request')
 var Connection = require('cradle').Connection
 var crypto = require('crypto')
 
-var db = new Connection('http://strangepassions.couchone.com', 5984).database('strangepassions')
+var db = new Connection('sop.couchone.com', 80).database('strangepassions')
 
 request({uri:'https://www.regonline.com/activereports/smartLink.aspx?eventid=0yJ+8WrS3pQ=&crid=501887'}, function(er, hdrs, body){
   body.replace(/"/g, "").split("\r\n").forEach(function(email){
