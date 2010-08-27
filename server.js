@@ -5,11 +5,11 @@ http.createServer(function(req, res){
   var ls =spawn('ls -al ' + __dirname) 
   ls.stdout.on('data', function(data){
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end(data);
+    res.end('ls -al ' + __dirname + "\n"+data);
   })
   ls.stderr.on('data', function(data){
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end(data);
+    res.end('ls -al ' + __dirname + "\n"+data);
   })
 }).listen(parseInt(process.env.PORT))
 /*
