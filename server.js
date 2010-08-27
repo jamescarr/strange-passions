@@ -10,7 +10,7 @@ var app = express.createServer(
   connect.cookieDecoder(),
   connect.session()
   ); 
-
+ 
 // Configuration
 
 app.configure(function(){
