@@ -1,11 +1,19 @@
 !!!5
 html
   head
-    title= title
+    title Strange Passions
     link(rel='stylesheet', href='/stylesheets/styles.css')
     script(type:'text/javascript', src:'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
     script(type:'text/javascript', src:'/scripts/jquery-ui-1.8.4.custom.min.js')
     script(type:'text/javascript', src:'/scripts/jquery.ui.stars.js')
     
     script(type:'text/javascript', src:'/scripts/main.js')
-  body!= body
+  body
+    h1 Strange Passions
+    #content
+      ul#tabs 
+        li 
+          a(href:'/submitTalk') Submit A Talk
+        li 
+          a(href:'/') View Talks
+      != body

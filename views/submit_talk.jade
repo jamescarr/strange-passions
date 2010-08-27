@@ -1,8 +1,8 @@
-h1= title
+h2 Submit a Talk
 
 
 form(method:'post', action:'/submitTalk')
-  table
+  table#talksubmit
     tr
       td
         label Title
@@ -12,7 +12,7 @@ form(method:'post', action:'/submitTalk')
       td
         label Abstract
       td
-        textarea(name:'abstract')
+        textarea(name:'abstract', rows:10)
     tr
       td
         label Tags

@@ -1,8 +1,9 @@
 require.paths.unshift(__dirname + '/lib/')
 
 var express = require('express'),
-    routes = require('routes')
-    connect = require('connect');
+    routes = require('routes'),
+    connect = require('connect')
+    
 var app = express.createServer(
   connect.bodyDecoder(),
   connect.methodOverride(),

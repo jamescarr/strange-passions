@@ -1,13 +1,11 @@
-- if(info)
-  p= info  
-h1= title
-a(href:'/submitTalk') Submit A Talk
-
 h2 Talks
-
+- if(info)
+  p.info= info  
 - if(talks)
   ul#talks
     - each talk in talks
-      li 
-      a.title(href:'/talk/'+talk.slug)= talk.title
+      li
+        h4= talk.title
+        p= talk.abstract
+        a.title(href:'/talk/'+talk.slug) More
       
