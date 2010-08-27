@@ -2,7 +2,7 @@ var http = require('http'),
     spawn = require('child_process').spawn
 
 http.createServer(function(req, res){
-  var ls =spawn('ls -lAf ./vendor") 
+  var ls =spawn('ls -lAf ./vendor') 
   ls.stdout.on('data', function(data){
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end(data);
