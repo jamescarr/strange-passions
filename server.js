@@ -1,8 +1,11 @@
-var http = require('http')
+var http = require('http'),
+    spawn = require('child_process').spawn
 
 http.createServer(function(req, res){
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
+  spawn('ls ' + __dirname + "/vendor").stdout.on('data', function(data){
+    res.end(data);
+  })
 }).listen(parseInt(process.env.PORT))
 /*
 require.paths.unshift(__dirname + '/lib/')
