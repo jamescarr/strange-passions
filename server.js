@@ -1,4 +1,5 @@
 require.paths.unshift(__dirname + '/lib/')
+require.paths.unshift(__dirname + '/vendor/')
 var port = process.env.PORT || 3000
 
 var express = require('express'),
