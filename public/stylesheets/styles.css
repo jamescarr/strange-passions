@@ -12,14 +12,14 @@ h1{
   text-indent: -6000px;
   background: #000 url(http://strangeloop2010.com/system/sites/logos/11304/original/banner3.png?1270101891) no-repeat;
   background-position: center center;
-  padding: 5px;
+  padding: 10px;
   width:80%;
   margin: 0px auto;
   height:150px; 
 }
 #content{
   margin: 10px auto;
-  padding: 5px;
+  padding: 10px;
   width: 80%;
   background: #fff;
 }
@@ -58,13 +58,18 @@ color:blue;
   list-style: none;
   display: block;
   width: 100px;
-  margin-right:10px;
+  padding: 0px;
+  margin-right:20px;
   float: left;
+  
 }
 #tabs{
+  padding: 0px;
   width: 100%;
   display:block;
   float: left;
+  margin-left: 0px;
+  clear: both;
 }
 .totalvotes{
   color:#fff;
@@ -76,6 +81,16 @@ td.left{
 td.right{
   text-align:right;
 }
+
+a, a:visited{
+  color: #3366CC;
+  text-decoration: none;
+}
+a:hover{
+  color: #ED1B1E;
+  text-decoration: underline;
+}
+
 
 /* rating */
 .ui-stars-star,.ui-stars-cancel{float:left;display:block;overflow:hidden;text-indent:-999em;cursor:pointer;}.ui-stars-star a,.ui-stars-cancel a{width:16px;height:15px;display:block;background:url(/images/jquery.ui.stars.gif) no-repeat 0 0;}.ui-stars-star a{background-position:0 -32px;}.ui-stars-star-on a{background-position:0 -48px;}.ui-stars-star-hover a{background-position:0 -64px;}.ui-stars-cancel-hover a{background-position:0 -16px;}.ui-stars-star-disabled,.ui-stars-star-disabled a,.ui-stars-cancel-disabled a{cursor:default!important;}

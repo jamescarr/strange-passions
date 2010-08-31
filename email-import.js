@@ -2,15 +2,20 @@ var request = require('request')
 var Connection = require('cradle').Connection
 var crypto = require('crypto')
 
-var db = new Connection('sop.couchone.com', 80).database('strangepassions')
+var db = new Connection('sop.couchone.com', 80).database('users')
 
-request({uri:'https://www.regonline.com/activereports/smartLink.aspx?eventid=0yJ+8WrS3pQ=&crid=501887'}, function(er, hdrs, body){
-  body.replace(/"/g, "").split("\r\n").forEach(function(email){
-    if(email.indexOf('@') > 0){
-      var hashedEmail = sha1(email)
-      db.get(hashedEmail, function(err, result){
+request({uri:'https://www.regonline.com/activereports/smartLink.aspx?eventid=0yJ+8WrS3pQ=&crid=501881'}, function(er, hdrs, body){
+  body.replace(/"/g, "").split("\r\n").forEach(function(emailRecord){
+    if(emailRecord.indexOf('@') > 0){
+      var fields = emailRecord.split(',')
+      var doc = {
+        firstname: fields[0],
+        lastname: fields[1],
+        email: sha1(fields[2])
+      }
+      db.get(doc.email, function(err, result){
         if(err)
-          db.insert(hashedEmail, {email:email}, function(){ console.log("Added " + email)})  
+          db.insert(doc.email, doc, function(){ console.log("Added " + fields[2])})  
       })
     }
   })
