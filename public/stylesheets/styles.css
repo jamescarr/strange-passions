@@ -20,6 +20,7 @@ h1{
 .markdown{
   color:#888;
   display: inline;
+  font-size: 11px;
 }
 #content{
   margin: 10px auto;
