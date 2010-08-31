@@ -19,6 +19,7 @@ h1{
 }
 .markdown{
   color:#888;
+  display: inline;
 }
 #content{
   margin: 10px auto;
