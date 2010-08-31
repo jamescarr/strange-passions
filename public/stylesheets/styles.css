@@ -17,6 +17,9 @@ h1{
   margin: 0px auto;
   height:150px; 
 }
+.markdown{
+  color:#888;
+}
 #content{
   margin: 10px auto;
   padding: 20px 10px;
