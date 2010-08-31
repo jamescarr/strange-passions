@@ -10,7 +10,11 @@ form(method:'post', action:'/submitTalk')
         input(type:'text', name:'title')
     tr
       td
-        label Abstract
+        label 
+          | Abstract 
+          .markdown (You can use 
+            a(href="http://en.wikipedia.org/wiki/Markdown")markdown
+            | too)
       td
         textarea(name:'abstract', rows:10)
     tr
