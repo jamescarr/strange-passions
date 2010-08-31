@@ -19,8 +19,8 @@ h1{
 }
 .markdown{
   color:#888;
-  display: inline;
-  font-size: 11px;
+  text-indent: 10px;
+  font-size: 12px;
 }
 #content{
   margin: 10px auto;
