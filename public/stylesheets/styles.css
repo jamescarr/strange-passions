@@ -100,7 +100,7 @@ a:hover{
 }
 #nav {
   margin: 0px auto;
-  font-weight: bold;
+  font-weight: normal;
   background-color: #transparent;
   padding-bottom: 0px;
   padding-top: 5px;
@@ -132,6 +132,9 @@ div.heading, #nav ul a {
   }  
 #nav ul li {
   display: inline;
+
+
+
 }
 
 #nav ul a {
