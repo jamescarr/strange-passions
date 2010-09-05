@@ -100,7 +100,10 @@ a:hover{
 }
 #nav {
   margin: 0px auto;
-  font-weight: normal;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
   background-color: #transparent;
   padding-bottom: 0px;
   padding-top: 5px;
