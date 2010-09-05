@@ -7,13 +7,14 @@ body {
  background-image: url(http://strangeloop2010.com/images/background/brushed-metal-charcoal.jpg)
 }
 
-h1{
+h1{ margin: 0px; }
+h1 a{
   display: block;
   text-indent: -6000px;
   background: #000 url(http://strangeloop2010.com/system/sites/logos/11304/original/banner3.png?1270101891) no-repeat;
   background-position: center center;
   padding: 10px;
-  width:80%;
+  width:940px;
   margin: 0px auto;
   height:150px; 
 }
@@ -23,9 +24,9 @@ h1{
   font-size: 12px;
 }
 #content{
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 20px 10px;
-  width: 80%;
+  width: 940px;
   background: #fff;
 }
 ul#talks{
@@ -66,23 +67,6 @@ color:blue;
   text-align:right;
   text-transform:lowercase;
 }
-#tabs li{
-  list-style: none;
-  display: block;
-  width: 100px;
-  padding: 0px;
-  margin-right:20px;
-  float: left;
-  
-}
-#tabs{
-  padding: 0px;
-  width: 100%;
-  display:block;
-  float: left;
-  margin-left: 0px;
-  clear: both;
-}
 .totalvotes{
   color:#fff;
   font-weight:bold;
@@ -102,7 +86,59 @@ a:hover{
   color: #ED1B1E;
   text-decoration: underline;
 }
+#nav_container { 
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0px;
+}
 
+#tabs{
+  padding: 0px;
+  margin-bottom:3px;
+}
+#nav {
+  margin: 0px auto;
+  font-weight: bold;
+  background-color: #transparent;
+  padding-bottom: 0px;
+  padding-top: 5px;
+  width: 920px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#nav ul a{
+    color: #FFFFFF;
+    background-color: #BC0A00;
+    font-size: 14px;
+  }
+#nav ul li{
+  margin-right: 5px;
+}
+#sp-actions{
+  list-style-type:none;
+  margin: 0; padding:0;
+}
+#sp-actions li {
+  display: inline;  
+  padding: .2em 1em;
+}
+div.heading, #nav ul a {
+    border: 1px solid #000000;
+  }
+#nav ul li.current a, #nav ul a:hover, .heading .action ul li.active a, .heading .action ul li.inprogress a, .heading .action ul li a:hover {
+    color: #FFFFFF;
+    background-color: #9B0800;
+  }  
+#nav ul li {
+  display: inline;
+}
+
+#nav ul a {
+  margin-right: 1px;
+  text-decoration: none; 
+  text-transform: capitalize;
+  padding: 4px 14px;
+}
 
 /* rating */
 .ui-stars-star,.ui-stars-cancel{float:left;display:block;overflow:hidden;text-indent:-999em;cursor:pointer;}.ui-stars-star a,.ui-stars-cancel a{width:16px;height:15px;display:block;background:url(/images/jquery.ui.stars.gif) no-repeat 0 0;}.ui-stars-star a{background-position:0 -32px;}.ui-stars-star-on a{background-position:0 -48px;}.ui-stars-star-hover a{background-position:0 -64px;}.ui-stars-cancel-hover a{background-position:0 -16px;}.ui-stars-star-disabled,.ui-stars-star-disabled a,.ui-stars-cancel-disabled a{cursor:default!important;}

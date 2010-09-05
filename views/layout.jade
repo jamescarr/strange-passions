@@ -9,18 +9,42 @@ html
     
     script(type:'text/javascript', src:'/scripts/main.js')
   body
-    h1 Strange Passions
+    h1 
+      a(href="http://strangeloop2010.com") Strange Passions
+    #nav_container
+      #nav 
+        ul#tabs
+          li
+            a(href="http://strangeloop2010.com/")
+              span Home
+          li
+            a(href="http://strangeloop2010.com/pages/regsiter")
+              span Register
+          li
+            a(href="http://strangeloop2010.com/calendar")
+              span Schedule
+          li
+            a(href="http://strangeloop2010.com/speakers")
+              span Speakers
+          li.current
+            a(href="/")
+              span Strange Passions                                                        
+          li
+            a(href="http://strangeloop2010.com/sponsors")
+              span Sponsors
+          li
+            a(href="http://strangeloop2010.com/pages/travel")
+              span Travel
+          li
+            a(href="http://strangeloop2010.com/pages/volunteers")
+              span Volunteers
+          li
+            a(href="http://strangeloop2010.com/connect")
+              span Connect
     #content
-      ul#tabs 
+      ul#sp-actions 
         li 
           a(href:'/submitTalk') Submit A Talk
         li 
-          a(href:'/') View Talks
+          a(href:'/talks') View Talks
       != body
-    :javascript
-      | var disqus_shortname = 'strangepassions';
-      | (function () {
-      |  var s = document.createElement('script'); s.async = true;
-      |  s.src = 'http://disqus.com/forums/strangepassions/count.js';
-      |  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      |}());

@@ -12,7 +12,6 @@ var app = express.createServer(
   ); 
  
 // Configuration
-
 app.configure(function(){
     app.set('views', __dirname + '/views');
     app.use('/', connect.compiler({ src: __dirname + '/public', enable: ['sass'] }));
@@ -31,4 +30,6 @@ app.configure('production', function(){
 routes.connect(app);
 
 
-app.listen(parseInt(process.env.PORT) || 3000, null);
+app.listen(parseInt(process.env.PORT) || 3000, null, function(){
+  console.log("server started on " + this.port)
+});
