@@ -103,7 +103,7 @@ a:hover{
   background-color: #transparent;
   padding-bottom: 0px;
   padding-top: 5px;
-  width: 940px;
+  width: 920px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -135,7 +135,6 @@ div.heading, #nav ul a {
 }
 
 #nav ul a {
-  margin-right: 1px;
   text-decoration: none; 
   text-transform: capitalize;
   padding: 4px 14px;
