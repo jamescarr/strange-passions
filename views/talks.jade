@@ -9,6 +9,6 @@ p Please rate each submitted Strange Passion talk.  The highest rates talks will
     - each talk in talks
       li
         h4= talk.title
-        p= talk.abstract
+        p!= talk.abstract
         a.title(href:'/talk/'+talk.slug) More
       
