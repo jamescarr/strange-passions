@@ -1,5 +1,5 @@
 body { 
- font-family: verdana, "trebuchet MS", helvetica, sans-serif; 
+ font-family: tahoma, arial, sans-serif;
  background-color: #fff;
  padding:0;
  margin: 0;
@@ -100,12 +100,15 @@ a:hover{
 }
 #nav {
   margin: 0px auto;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
   font-weight: bold;
   background-color: #transparent;
   padding-bottom: 0px;
   padding-top: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #nav ul a{
     color: #FFFFFF;
@@ -132,6 +135,9 @@ div.heading, #nav ul a {
   }  
 #nav ul li {
   display: inline;
+
+
+
 }
 
 #nav ul a {
