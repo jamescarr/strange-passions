@@ -4,7 +4,7 @@ var Connection = require('cradle').Connection,
 
 var DESIGN_DOCS_DIR = __dirname + '/designdocs/'
 
-var db = new Connection('sop.couchone.com', 80).database('strangepassions')
+var db = new Connection('sop-staging.couchone.com', 80).database('strangepassions')
 
 db.exists(function(err, result){
   if(!result){
