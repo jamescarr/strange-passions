@@ -26,8 +26,12 @@ exports.Request = FakeRequest
 exports.Response = RecordingResponse
 exports.Talks = function(){
   this.called = {}
-  this.save = function(talk, callback){
-    this.called.save = [talk]
-    process.nextTick(callback)
-  }
+  var self = this;
+  ['save', 'vote'].forEach(function(name){
+    self[name] = function(arg, cb){
+      self.called[name] = [arg]
+      process.nextTick(cb);
+    }
+  });
+  this.reset = function(){ this.called = {} }
 }
