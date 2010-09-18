@@ -25,7 +25,7 @@ vows.describe('Votes').addBatch({
       'should render message indicating that vote was cast':function(interaction){
         var res = interaction.res
         
-        assert.deepEqual(res.called.send[0], {message:'Your vote has been cast'});
+        assert.deepEqual(res.called.send[0], JSON.stringify({message:'Your vote has been cast'}));
       }
     }
   }
