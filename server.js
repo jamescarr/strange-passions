@@ -2,7 +2,8 @@ require.paths.unshift(__dirname + '/lib/')
 require.paths.unshift(__dirname + '/vendor/')
 var express = require('express'),
     routes = require('routes'),
-    connect = require('connect')
+    connect = require('connect'),
+    config = require('config')
     
 var app = express.createServer(
   connect.bodyDecoder(),
@@ -29,7 +30,8 @@ app.configure('production', function(){
 
 routes.connect(app);
 
-
-app.listen(parseInt(process.env.PORT) || 3000, null, function(){
-  console.log("server started on " + this.port)
+var PORT = parseInt(process.env.PORT) || 3000
+app.listen(PORT,  function(){
+  console.log("server started on " + PORT)
+  console.log("couch url is " + config.dburl)
 });

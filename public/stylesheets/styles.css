@@ -6,7 +6,16 @@ body {
  background-color: #140302;
  background-image: url(http://strangeloop2010.com/images/background/brushed-metal-charcoal.jpg)
 }
-
+.info{
+  display: block;
+  position: absolute;
+  background-color:#F4A83D;
+  font-weight: bold;
+  text-align: center;
+  top: 0; left:0; right:0;
+  margin: 0;
+  padding:  7px 0px;
+}
 h1{ margin: 0px;padding:0; }
 h1 a{
   display: block;

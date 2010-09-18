@@ -4,6 +4,8 @@ $(function(){
     inputType:'select'
   })
   
-  
+  setTimeout(function(){
+    $('.info').fadeOut(2000)
+  }, 2000)
 })
 
