@@ -20,6 +20,9 @@ function RecordingResponse(){
   this.redirect = function(page){
     this.called.redirect = [page]
   }
+  this.send = function(content){
+   this.called.send = [content]
+  }
 }
 
 exports.Request = FakeRequest

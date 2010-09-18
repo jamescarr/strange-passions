@@ -30,10 +30,11 @@ app.configure('production', function(){
 
 routes.connect(app);
 
+var PORT = process.env.PORT || 3000;
 if(process.env.NODE_ENV == 'production'){
-app.listen(parseInt(process.env.PORT) || 3000,null);
+  app.listen(PORT,null);
 }else{
-  app.listen(parseInt(process.env.PORT) || 3000,function(){
+  app.listen(PORT,function(){
     console.log("server started on " + PORT)
     console.log("couch url is " + config.dburl)
   });
