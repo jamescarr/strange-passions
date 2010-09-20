@@ -1,6 +1,7 @@
-p= message
+#login
+  p= message
 
-form(method:'post', action:'/login')
-  label Email:
-    input(type:'text', name:'email')
-  input(type:'submit', value:'Let Me In Now')
+  form(method:'post', action:'/login')
+    label Email:
+      input(type:'text', name:'email', id:'email')
+    input(type:'submit', value:'Let Me In Now')

@@ -28,5 +28,20 @@ vows.describe('Votes').addBatch({
         assert.deepEqual(res.called.send[0], JSON.stringify({message:'Your vote has been cast'}));
       }
     }
+  },
+  'Given the user is not logged in':{
+    topic:function(){
+      var req = new fake.Request({talk:'lightsabers!', rating:3})
+      var res = new fake.Response()
+       
+      var voter = new Voter(talks)
+      voter.vote(req, res)
+      return {res:res, talks:talks}
+    },
+    'should indicate that they should login to vote':function(interaction){
+      var res = interaction.res
+    
+      assert.deepEqual(res.called.send[0], JSON.stringify({mustLogin:true}));
+    }
   }
 }).export(module)

@@ -1,16 +1,17 @@
 
+form#vote-widget(method="post", action="/vote/"+talk.slug)
+  input(type="hidden", value=talk.slug, name="talk")
+  p Your Rating: 
+    span#rating-cap
+  #vote
+    input(name="rating", type="radio", value=1)
+    input(name="rating", type="radio", value=2)
+    input(name="rating", type="radio", value=3)
+    input(name="rating", type="radio", value=4)
+    input(name="rating", type="radio", value=5)
+    
 h2= talk.title
 
-form#vote-widget(method="post", action="/vote/"+talk.slug)
-  #vote
-    input(name="star1", type="radio", value=1)
-    input(name="star1", type="radio", value=2)
-    input(name="star1", type="radio", value=3)
-    input(name="star1", type="radio", value=4)
-    input(name="star1", type="radio", value=5)
-    
-  p Total Votes: 0
-    
   
 #author= "Posted by " + talk.speaker
 #talk!= talkBody
