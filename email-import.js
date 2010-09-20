@@ -4,7 +4,7 @@ var crypto = require('crypto')
 
 var db = new Connection('sop-staging.couchone.com', 80).database('users')
 
-request({uri:'https://www.regonline.com/activereports/smartLink.aspx?eventid=0yJ+8WrS3pQ=&crid=501881'}, function(er, hdrs, body){
+request({uri:'####'}, function(er, hdrs, body){
   body.replace(/"/g, "").split("\r\n").forEach(function(emailRecord){
     if(emailRecord.indexOf('@') > 0){
       var fields = emailRecord.split(',')
