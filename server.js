@@ -30,6 +30,7 @@ app.configure('production', function(){
 
 routes.connect(app);
 
-var PORT = process.env.PORT || 3000;
-app.listen(PORT);
-  
+app.listen(parseInt(process.env.PORT) || 3000, null, function(){
+  console.log("server started on " + this.port)
+});
+
