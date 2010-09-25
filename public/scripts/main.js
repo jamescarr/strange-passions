@@ -16,12 +16,28 @@ $(function(){
     }
   });
   
+  $("#overall-rating").stars({
+    cancelShow:false,
+    captionEl:$('#overall-caption'),
+    disabled:true
+
+  });
+
+  
   if(isTalkPage()){
     $.get('/rating/'+val('talk'), function(result){
       $("#vote").stars('select', result.rating);
     });
+    updateOverallVotes();
   }
 })
+
+function updateOverallVotes(){
+    $.get('/overall-rating/'+val('talk'),  function(stats){
+      $('#overall-rating').stars('select', Math.round(stats.average));
+      $('#overall-caption').text(stats.average + " ("+stats.count+" votes)");
+    });
+}
 function isTalkPage(){
   return window.location.href.indexOf('/talk/') > -1
 }
@@ -59,6 +75,7 @@ function processLogin(){
 
 function displayVoteSubmitted(){
   $('body').append('<p class="info">Your vote has been submitted</p>');
+  updateOverallVotes();
   setTimeout(function(){
     $('.info').fadeOut(2000, function(){ $('.info').remove(); });
   }, 2000);

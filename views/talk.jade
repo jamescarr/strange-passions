@@ -1,6 +1,17 @@
 
+
 form#vote-widget(method="post", action="/vote/"+talk.slug)
   input(type="hidden", value=talk.slug, name="talk")
+  p 
+    strong Overall Rating: 
+    span#overall-caption
+  #overall-rating
+    input(name="total", type="radio", value=1)
+    input(name="total", type="radio", value=2)
+    input(name="total", type="radio", value=3)
+    input(name="total", type="radio", value=4)
+    input(name="total", type="radio", value=5)
+  br
   p Your Rating: 
     span#rating-cap
   #vote
@@ -12,7 +23,6 @@ form#vote-widget(method="post", action="/vote/"+talk.slug)
     
 h2= talk.title
 
-  
 #author= "Posted by " + talk.speaker
 #talk!= talkBody
 strong.about About the speaker:

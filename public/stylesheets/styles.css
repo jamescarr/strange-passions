@@ -10,6 +10,8 @@ body {
   float:right;
   margin-right: 10px;
   margin-bottom: 5px;
+  margin-top:0;
+  padding-top: 0;
 }
 #vote-widget p{
   font:12px Trebuchet MS,Arial,sans-serif;
