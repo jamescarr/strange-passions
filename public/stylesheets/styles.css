@@ -6,7 +6,8 @@ body {
  background-color: #140302;
  background-image: url(http://strangeloop2010.com/images/background/brushed-metal-charcoal.jpg)
 }
-#vote-widget{
+
+#vote-widget, .rating{
   float:right;
   margin-right: 10px;
   margin-bottom: 5px;
@@ -14,7 +15,8 @@ body {
   padding-top: 0;
   padding-left: 5px;
 }
-#vote-widget p{
+.rating{ background: #eee; padding: 5px;}
+#vote-widget p, .rating{
   font:12px Trebuchet MS,Arial,sans-serif;
   margin-bottom:2px;
 }

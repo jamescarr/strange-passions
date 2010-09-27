@@ -6,6 +6,11 @@ p Please rate each submitted Strange Passion talk.  The highest rates talks will
   ul#talks
     - each talk in talks
       li
+        .rating
+          .avg= 'Average Rating: ' + talk.average
+          .total
+            strong= talk.count+' '
+            span  Total Votes 
         h4= talk.title
         p!= talk.abstract
         a.title(href:'/talk/'+talk.slug) More
